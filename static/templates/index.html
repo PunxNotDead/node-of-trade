@@ -1,0 +1,70 @@
+<div class="container">
+	<div class="tabs-container">
+		<div class="tabs-title-container">
+			<div ng-class="{ 'active-title': isSelected(0), 'tab-title': true }" ng-click="selectTab(0);">
+				File Content
+			</div>
+
+			<div ng-class="{ 'active-title':isSelected(1), 'tab-title': true }" ng-click="selectTab(1);">
+				Rss feed
+			</div>
+
+			<div ng-class="{ 'active-title': isSelected(2), 'tab-title': true }" ng-click="selectTab(2);">
+				JSON
+			</div>
+		</div>
+
+		<div class="tabs-content-container">
+			<div ng-class="{ 'active-tab': isSelected(0), 'tab-content tab-content-file': true }">
+				<div ng-if="fileError">
+					Error: {{fileError}}
+				</div>
+				<div ng-if="!fileError">
+					<div>
+						<h1>Hosts:</h1>
+						<ul>
+							<li ng-repeat="host in fileData.hosts">
+								{{host.value}} ({{host.times}} times)
+							</li>
+						</ul>
+						<h1>Files:</h1>
+						<ul>
+							<li ng-repeat="file in fileData.files">
+								{{file.value}} ({{file.times}} times)
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div ng-class="{ 'active-tab': isSelected(1), 'tab-content tab-content-rss': true }">
+				<div ng-if="rssError">
+					Error: {{rssError}}
+				</div>
+
+				<div ng-if="!rssError">
+					<h1>Rss feeds:</h1>
+					<ul>
+						<li ng-repeat="feed in rssData">
+							{{feed.title}} ({{feed.publishDate}})
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div ng-class="{ 'active-tab': isSelected(2), 'tab-content tab-content-json': true }">
+				<div ng-if="jsonError">
+					Error: {{jsonError}}
+				</div>
+				<div ng-if="!jsonError">
+					<h1>JSON feeds:</h1>
+					<ul>
+						<li ng-repeat="feed in jsonData">
+							{{feed.title}} ({{feed.time}} {{feed.date}})
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+{
+  "name": "node-of-trade",
+  "version": "0.0.1",
+  "homepage": "https://github.com/PunxNotDead/node-of-trade",
+  "description": "Components for Node of Trade application",
+  "main": "app.js",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "keywords": [
+    "Node",
+    "of",
+    "Trade"
+  ],
+  "authors": [
+    "Mikhail Ziankevich"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/js/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "node-of-trade",
+  "version": "0.0.1",
+  "description": "Node.js shop script",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PunxNotDead/node-of-trade.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Shopping",
+    "cart"
+  ],
+  "author": "Mikhail Ziankevich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PunxNotDead/node-of-trade/issues"
+  },
+  "homepage": "https://github.com/PunxNotDead/node-of-trade",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-domain-middleware": "^0.1.0",
+    "method-override": "^2.3.5",
+    "nodemon": "^1.7.1"
+  }
+}
